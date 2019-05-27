@@ -19,15 +19,17 @@ GUI mode opens the nice Cypress GUI and is more suited while developing e2e test
 
 Each can run their own webpack dev server or use the one that is already started by you.
 
+#### GUI Mode
+`npm run test:runner` - this starts the Cypress test runner
+
+![alt text](report.png "Execution Report")
+
 #### Headless mode
 `npm run test` - this starts e2e tests in headless without video
 
 `npm run test:record` - this starts e2e tests in headless with video recording
 
 *Recorded videos* - ./cypress/videos
-
-#### GUI Mode
-`npm run test:runner` - this starts the Cypress test runner
 
 ### Coverage
 - Home page
