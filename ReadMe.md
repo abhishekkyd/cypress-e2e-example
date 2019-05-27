@@ -21,6 +21,7 @@ Each can run their own webpack dev server or use the one that is already started
 
 #### Headless mode
 `npm run test` - this starts e2e tests in headless without video
+
 `npm run test:record` - this starts e2e tests in headless with video recording
 
 *Recorded videos* - ./cypress/videos
@@ -28,11 +29,11 @@ Each can run their own webpack dev server or use the one that is already started
 #### GUI Mode
 `npm run test:runner` - this starts the Cypress test runner
 
-#Coverage
+### Coverage
 - Home page
 - Contact us page
 
-#Prequisites
+### Prequisites
 - Node.js should be installed
 
 
