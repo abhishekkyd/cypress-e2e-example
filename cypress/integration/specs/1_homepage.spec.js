@@ -10,7 +10,7 @@ context('Homepage', () => {
 
   it('Verify navigation menu items', () => {
     cy.log("Navigation menu should have 9 items")
-    cy.get('.leftLinks a').should('have.length', 10)
+    cy.xpath('//*[@class="leftLinks"]//li[not(contains(@class,"ng-hide"))]/a').should('have.length', 9)
     cy.log("Navigation menu item should contain Corporate, Business, International etc")
     cy.get('.leftLinks a').should('contain', 'Corporate')
                           .and('contain', 'Business')

@@ -21,18 +21,19 @@ context('Contact Us', () => {
 
   it('Verify The "I am looking to…" dropdown items', () => {
     cy.log("The 'I am looking to…' dropdown should have 4 items")
-    cy.get('#reachoutforproduct option').should('have.length', 5)
+    cy.xpath('//*[@id="reachoutforproduct"]/option[not(contains(text(),"I am looking to"))]').should('have.length', 4)
   })
 
   it('Verify initially the "Select Sub Product" dropdown is empty', () => {
     cy.log("Initially the 'Select Sub Product' dropdown should be empty")
-    cy.get('#product option').should('have.length', 1)
+    cy.xpath('//*[@id="product"]/option[not(contains(text(),"Select Sub Product"))]').should('have.length', 0)
+    //cy.get('#product option').should('have.length', 1)
   })
 
   it('Verify the "Select Sub Product" dropdown after selecting a product "Loans"', () => {
     cy.log("The 'Select Sub Product' dropdown should contain 'Home Loan UAE Resident' after select 'Loans' from the 'Select Product' dropdown")
     cy.get('#need').select("Loans")
-    cy.get('#product option').should('have.length', 7).and("contain", "Home Loan UAE Resident")
+    cy.xpath('//*[@id="product"]/option[not(contains(text(),"Select Sub Product"))]').should('have.length', 6).and("contain", "Home Loan UAE Resident")
   })
 
   it('Submitting the form with less than 7 digit in Mobile Number field', () => {
